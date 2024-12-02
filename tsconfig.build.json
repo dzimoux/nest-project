@@ -1,28 +1,4 @@
 {
-  "extends": "@tsconfig/strictest/tsconfig",
-  "compilerOptions": {
-    // @todo extend from @tsconfig/node22/tsconfig after ts-node support extends array
-    "lib": ["es2023"],
-    "module": "node16",
-    "target": "es2022",
-    "moduleResolution": "node16",
-
-    "allowJs": false,
-    "checkJs": false,
-
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-
-    "forceConsistentCasingInFileNames": true,
-
-    "noEmit": true,
-    "baseUrl": "./",
-    "paths": {
-      "~/*": ["./src/*"]
-    }
-  },
-  "include": ["src/**/*", "tests/**/*"],
-  "ts-node": {
-    "require": ["tsconfig-paths/register"]
-  }
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
 }

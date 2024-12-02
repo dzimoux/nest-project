@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import { CreateCommentDto } from './dto/create-comment.dto';
+import { CreateCommentDto } from '../dto/create-comment.dto';
 
 @Injectable()
 export class CommentsService {
@@ -10,5 +10,9 @@ export class CommentsService {
 
   findAll() {
     return `This action returns all comments`;
+  }
+
+  public async deleteAllCommentsForArticle(articleId: string){
+
   }
 }

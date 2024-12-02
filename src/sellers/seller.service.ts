@@ -1,16 +1,16 @@
 import { Injectable } from '@nestjs/common';
 
-import { CreateClientReqDto } from './dto/req/create-client-req.dto';
-import { UpdateClientReqDto } from './dto/req/update-client-req.dto';
-import { ClientResDto } from './dto/res/client.res.dto';
+import { CreateSellerReqDto } from './dto/req/create-seller-req.dto';
+import { UpdateSellerReqDto } from './dto/req/update-seller-req.dto';
+import { SellerResDto } from './dto/res/seller.res.dto';
 
 @Injectable()
-export class ClientsService {
+export class SellerService {
   public async create(
-    createClientDto: CreateClientReqDto,
-  ): Promise<ClientResDto> {
-    console.log(createClientDto);
-    return {} as ClientResDto;
+    createSellerDto: CreateSellerReqDto,
+  ): Promise<SellerResDto> {
+    console.log(createSellerDto);
+    return {} as SellerResDto;
   }
 
   findAll() {
@@ -21,7 +21,7 @@ export class ClientsService {
     return `This action returns a #${id} client`;
   }
 
-  update(id: number, updateClientDto: UpdateClientReqDto) {
+  update(id: number, updateSellerDto: UpdateSellerReqDto) {
     return `This action updates a #${id} client`;
   }
 
